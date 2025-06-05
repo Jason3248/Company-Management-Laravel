@@ -1,61 +1,115 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+ # Office Management System – Laravel Project
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Project Overview
 
-## About Laravel
+This is a simple Office Management System built using Laravel and MySQL, designed to manage Companies and Employees.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# Features:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-Company CRUD (Create, Read, Update, Delete)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-Employee CRUD with Manager assignment. One Manager(employee) for every Employee.
 
-## Learning Laravel
+-Dynamic Country/State/City selection via API
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-DataTables integration for search, pagination, and filtering
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+-Simple Home Navigation Page (TailwindCSS)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+# Requirements
 
-## Laravel Sponsors
+PHP (via XAMPP)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Composer installed globally
 
-### Premium Partners
+MySQL (included in XAMPP)
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Laravel 10+
 
-## Contributing
+# Installation & Setup (Using XAMPP)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. Clone the Repository
 
-## Code of Conduct
+git clone https://github.com/Jason3248/Company-Management-Laravel.git
+cd Company-Management-Laravel
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+2. Start XAMPP
 
-## Security Vulnerabilities
+Open XAMPP Control Panel
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Start Apache and MySQL
 
-## License
+Go to http://localhost/phpmyadmin and create a database:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+DB Name: office_management(anything of your choice).
+
+3. Install Dependencies
+
+composer install
+
+4. Create .env Configuration
+
+cp .env.example .env
+
+Edit .env and set your database connection:
+
+DB_DATABASE=office_management
+DB_USERNAME=root
+DB_PASSWORD=
+
+5. Generate Application Key
+
+php artisan key:generate
+
+6. Run Migrations
+
+php artisan migrate
+
+7. Serve the Project
+
+php artisan serve
+
+Visit:
+
+http://localhost:8000
+
+🌐 Routes
+
+/ → Home Navigation Page
+
+/companies → Company Management
+
+/employees → Employee Management
+
+# Notes
+
+Country/State/City dropdown uses CountriesNow API
+Website Link(no API key req): https://countriesnow.space/
+
+Manager dropdown updates based on selected company
+
+TailwindCSS is used for styling
+
+# Some Screenshots
+
+1. Home Page
+   ![image](https://github.com/user-attachments/assets/d94a685a-a7a6-40c2-b16d-e2357b746814)
+   
+
+2. Employee Viewing and Management
+   ![image](https://github.com/user-attachments/assets/84a8176c-46ba-454e-8564-486774790283)
+   
+
+3. Adding Employee
+    ![image](https://github.com/user-attachments/assets/abcaf3b5-db47-4cd3-9d2c-2f683df79dfa)
+
+4. Company
+
+   ![image](https://github.com/user-attachments/assets/2d7482e4-8c3f-4b88-a73a-11bd4fc1aa57)
+
+
+# Author
+
+Jason Dsouza
+
+# THANK YOU
