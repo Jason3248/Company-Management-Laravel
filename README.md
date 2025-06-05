@@ -86,6 +86,18 @@ http://localhost:8000
 Country/State/City dropdown uses CountriesNow API
 Website Link(no API key req): https://countriesnow.space/
 
+URL used:
+ 1. https://countriesnow.space/api/v0.1/countries/states
+    method: GET
+    This fetches all countries and states.
+
+ 2. 'https://countriesnow.space/api/v0.1/countries/state/cities' 
+--data '{
+    "country": "Nigeria",
+    "state": "Lagos"
+}'
+    method: POST
+
 Manager dropdown updates based on selected company
 
 TailwindCSS is used for styling
