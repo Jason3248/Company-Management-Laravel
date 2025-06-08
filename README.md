@@ -45,7 +45,7 @@ DB Name: office_management(anything of your choice).
 
 ## 3. Install Dependencies
 
-composer install
+Run 'composer install' command in your project root terminal
 
 ## 4. Create .env Configuration
 
